@@ -44,15 +44,14 @@ npm run scrape https://blog.samaltman.com/
 **Step 2: Prepare Training Data**
 1. **Move data to training/validation samples** (you can use the autosplit feature for automatic data splitting)
 2. **Create a snapshot** based on your training and validation datasets
-3. Review your data split ratios and ensure quality
 
 **Step 3: Fine-tune Your Model**
 1. Go to [PremAI Studio Fine-tuning](https://studio.premai.io/finetuning)
 2. **Run a fine-tuning job** using your prepared dataset snapshot
-3. **Monitor experiments** and track training progress
+3. **Run experiments** and track training progress
 4. **After completion** - your custom models are ready to use in the chat interface!
 
-Your model will now have deep knowledge from the blogs you scraped and can answer questions with domain-specific expertise!
+Your model will now have knowledge from the blogs you scraped!
 
 ### 3. 💬 Use Your Fine-Tuned Model
 
@@ -61,14 +60,8 @@ Your model will now have deep knowledge from the blogs you scraped and can answe
 npm run dev
 ```
 
-**Features:**
-- 🤖 **Dynamic Model Selection** - Automatically loads your fine-tuned models
-- 💬 **Rich Chat Interface** - Markdown formatting, code blocks, lists
-- 🔒 **Secure Backend** - API keys stay server-side
-- ⚡ **Real-time Responses** - Powered by PremAI SDK
-- 📱 **Modern UI** - Built with Next.js 15 + Tailwind CSS 4
 
-Ask questions about the content you trained on and see how your model responds with domain-specific knowledge!
+Ask questions about the content you trained on and see how your model responds with domain-specific knowledge.
 
 ## ⚙️ Setup
 
@@ -122,55 +115,9 @@ npm run lint         # Run ESLint
 npm run scrape <url> # Scrape blog content for training
 ```
 
-## 🎯 Why This Stack?
 
-### **Next.js 15** 
-- Full-stack framework with API routes
-- Server-side API key security
-- Modern React 19 features
 
-### **PremAI SDK**
-- Easy integration with fine-tuned models
-- Dynamic model listing
-- Reliable chat completions
-
-### **RSS/Atom Scraping**
-- Universal blog format support
-- Clean, complete content extraction
-- No brittle HTML parsing
-- Perfect for training data
-
-### **Tailwind CSS 4**
-- Modern, responsive UI
-- Zero-config setup
-- Consistent design system
-
-## 🔒 Security Features
-
-- ✅ **Server-side API keys** - Never exposed to frontend
-- ✅ **Type-safe error handling** - Consistent error responses  
-- ✅ **Input validation** - Protected API endpoints
-- ✅ **Secure logging** - No sensitive data in logs
-
-## 📝 Example Use Cases
-
-1. **Customer Support Bot** - Train on your documentation
-2. **Domain Expert** - Train on industry-specific content  
-3. **Writing Assistant** - Train on your preferred writing style
-4. **Knowledge Base** - Train on company knowledge/procedures
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
-
-MIT License - feel free to use this for your own projects!
 
 ---
 
-**Built with ❤️ using PremAI, Next.js, and modern web technologies.** 
+**Built with ❤️ using PremAI** 
