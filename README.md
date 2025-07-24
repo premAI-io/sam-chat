@@ -97,8 +97,8 @@ PREMAI_API_KEY=your_api_key_here
 │   └── types/
 │       └── errors.ts              # Type-safe error handling
 ├── scraper/
+│   ├── scrape.js                  # RSS/Atom feed scraper script  
 │   └── scraped/                   # Generated content (gitignored)
-├── scrape.js                      # Standalone scraper script
 └── package.json                   # Dependencies & scripts
 ```
 

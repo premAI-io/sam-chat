@@ -1,6 +1,7 @@
-import axios from 'axios';
-import fs from 'fs-extra';
-import { XMLParser } from 'fast-xml-parser';
+const axios = require('axios');
+const fs = require('fs-extra');
+const { XMLParser } = require('fast-xml-parser');
+const path = require('path');
 
 const cleanText = (text) => {
   if (!text || typeof text !== 'string') return '';
@@ -53,7 +54,8 @@ async function extractPosts(url) {
 const POSTS_PER_FILE = 10;
 
 async function savePosts(posts) {
-  await fs.ensureDir('./scraper/scraped');
+  const outputDir = path.join(process.cwd(), 'scraper', 'scraped');
+  await fs.ensureDir(outputDir);
   
   const totalBatches = Math.ceil(posts.length / POSTS_PER_FILE);
   
@@ -62,7 +64,7 @@ async function savePosts(posts) {
     const endIndex = Math.min(startIndex + POSTS_PER_FILE, posts.length);
     const batchPosts = posts.slice(startIndex, endIndex);
     
-    const filename = `./scraper/scraped/batch_${batchIndex + 1}_posts_${startIndex + 1}-${endIndex}.txt`;
+    const filename = path.join(outputDir, `batch_${batchIndex + 1}_posts_${startIndex + 1}-${endIndex}.txt`);
     
     let content = '';
     batchPosts.forEach((post, index) => {
