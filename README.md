@@ -1,6 +1,10 @@
-# PremAI Sample: Chat with Fine-Tuned Models
+# Sam Chat: Chat with Fine-Tuned Models
 
 A complete Next.js application that demonstrates the full workflow of collecting data, fine-tuning models, and chatting with your custom AI models using PremAI.
+
+## 📸 Demo
+
+<img width="918" height="742" alt="Sam Chat Interface" src="https://github.com/user-attachments/assets/99db7697-d5de-43b3-8066-1e53e16fb226" />
 
 ## 🚀 Quick Start
 
@@ -27,6 +31,8 @@ Use the integrated scraper to gather training data from any blog:
 # Scrape Sam Altman's blog (perfect for AI/tech content) - it uses rss feed
 npm run scrape https://blog.samaltman.com/
 ```
+
+![Scraper Demo](https://github.com/user-attachments/assets/c1e10cac-5ac9-439c-bd90-10c545483a07)
 
 **What happens:**
 - 🔍 Automatically finds RSS/Atom feeds 
@@ -120,4 +126,4 @@ npm run scrape <url> # Scrape blog content for training
 
 ---
 
-**Built with ❤️ using PremAI** 
+**Sam Chat - Built with ❤️ using PremAI** 

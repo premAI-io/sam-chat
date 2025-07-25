@@ -25,7 +25,7 @@ export default function MessageList({ messages, isLoading }: MessageListProps) {
   }, [messages]);
 
   return (
-    <div className="flex-1 overflow-y-auto p-6 space-y-4">
+    <div className="h-96 overflow-y-auto p-6 space-y-4">
       {messages.map((message) => (
         <ChatMessage key={message.id} message={message} />
       ))}

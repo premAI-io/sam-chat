@@ -1,7 +1,7 @@
 {
-  "name": "premai-sample",
+  "name": "sam-chat",
   "version": "1.0.0",
-  "description": "PremAI sample chat application",
+  "description": "Sam Chat - Chat with fine-tuned AI models powered by PremAI",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
