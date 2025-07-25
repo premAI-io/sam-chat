@@ -32,7 +32,7 @@ Use the integrated scraper to gather training data from any blog:
 npm run scrape https://blog.samaltman.com/
 ```
 
-![Scraper Demo](https://github.com/user-attachments/assets/c1e10cac-5ac9-439c-bd90-10c545483a07)
+![Scraper Demo](https://github.com/user-attachments/assets/3e23d6cb-1232-4211-b507-a9cf22b9c5da)
 
 **What happens:**
 - 🔍 Automatically finds RSS/Atom feeds 
