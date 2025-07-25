@@ -29,7 +29,7 @@ export default function MessageInput({
   };
 
   return (
-    <div className="border-t p-6">
+    <div className="border-t border-gray-200 p-6 bg-gray-50">
       <div className="flex space-x-4">
         <input
           type="text"
@@ -38,12 +38,23 @@ export default function MessageInput({
           onKeyDown={handleKeyDown}
           placeholder="Type your message..."
           disabled={isDisabled}
-          className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
+          className="flex-1 px-4 py-2 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary disabled:bg-gray-100"
         />
         <button
           onClick={handleSend}
-          disabled={isLoading || !input.trim() || isDisabled}
-          className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed"
+          disabled={isLoading || isDisabled}
+          className="px-6 py-2 text-white rounded-lg disabled:bg-gray-400 disabled:cursor-not-allowed transition-colors"
+          style={{ backgroundColor: isLoading || isDisabled ? '#9CA3AF' : '#4c6ef5' }}
+          onMouseEnter={(e) => {
+            if (!isLoading && !isDisabled) {
+              e.currentTarget.style.backgroundColor = '#3730a3';
+            }
+          }}
+          onMouseLeave={(e) => {
+            if (!isLoading && !isDisabled) {
+              e.currentTarget.style.backgroundColor = '#4c6ef5';
+            }
+          }}
         >
           Send
         </button>

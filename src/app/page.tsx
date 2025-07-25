@@ -114,30 +114,46 @@ export default function ChatPage() {
   const isDisabled = isLoading || !selectedModel || modelsLoading;
 
   return (
-    <div className="flex flex-col h-screen max-w-4xl mx-auto bg-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-white to-white">
       <ChatHeader 
         title="💬 PremAI Chat" 
         subtitle="Chat with your fine-tuned models" 
       />
       
-      <ModelSelector
-        selectedModel={selectedModel}
-        onModelChange={handleModelChange}
-        models={fineTunedModels}
-        isLoading={modelsLoading}
-      />
+      <div className="max-w-4xl mx-auto px-4 py-2">
+        <ModelSelector
+          selectedModel={selectedModel}
+          onModelChange={handleModelChange}
+          models={fineTunedModels}
+          isLoading={modelsLoading}
+        />
+        
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 mt-6">
+          <MessageList 
+            messages={messages} 
+            isLoading={isLoading} 
+          />
+          
+          <MessageInput
+            onSendMessage={handleSendMessage}
+            isLoading={isLoading}
+            isDisabled={isDisabled}
+            status={status}
+          />
+        </div>
+      </div>
       
-      <MessageList 
-        messages={messages} 
-        isLoading={isLoading} 
-      />
-      
-      <MessageInput
-        onSendMessage={handleSendMessage}
-        isLoading={isLoading}
-        isDisabled={isDisabled}
-        status={status}
-      />
+      {/* Footer */}
+      <footer className="text-center py-6 text-sm text-gray-500">
+        Sample from: <a 
+          href="https://github.com/premAI-io/sam-chat" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-secondary hover:text-secondary-600 underline"
+        >
+          https://github.com/premAI-io/sam-chat
+        </a>
+      </footer>
     </div>
   );
 }

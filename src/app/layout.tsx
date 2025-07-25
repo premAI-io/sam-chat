@@ -1,12 +1,23 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+})
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'PremAI Chat',
-  description: 'Simple MVP chat powered by PremAI',
+  title: 'Sam Chat - Powered by PremAI',
+  description: 'Chat with fine-tuned AI models using PremAI Studio',
+  keywords: ['Sam Chat', 'PremAI', 'AI', 'chat', 'fine-tuning', 'machine learning'],
 }
 
 export default function RootLayout({
@@ -15,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+      <body className="font-sans antialiased bg-gradient-to-b from-gray-50 via-white to-white text-gray-900">{children}</body>
     </html>
   )
 }

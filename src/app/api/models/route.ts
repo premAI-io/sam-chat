@@ -16,9 +16,8 @@ export async function GET() {
     
     // Filter for fine-tuned models only
     const fineTunedModels = response.data.filter(model => 
-      model.id.includes('ft-') || 
-      model.id.includes('fine-tuned') || 
-      model.owned_by === 'user'
+     
+      model.owned_by !== 'premai'
     );
 
     // Format models for frontend
